@@ -5,14 +5,14 @@ class App {
     private $app;
     
     public function __construct() {
-        // initalize Slim App
+        // initialize Slim App
         $app = new \Slim\App(\App\Config\Config::slim());
         $this->app = $app;
-        // initalize dependencies
+        // initialize dependencies
         $this->dependencies();
-        // initalize middlewares
+        // initialize middlewares
         $this->middleware();
-        // initalize routes
+        // initialize routes
         $this->routes();
     }
     

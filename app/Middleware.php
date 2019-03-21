@@ -25,7 +25,7 @@ class Middleware {
     
     // JWT Authentication (tuupola/slim-jwt-auth)
     function jwt() {
-        $this->container->get('db'); // JWT middleware callbacks dependent on DB, make sure Eloquent is initalized
+        $this->container->get('db'); // JWT middleware callbacks dependent on DB, make sure Eloquent is initialized
         $this->app->add(new \Tuupola\Middleware\JwtAuthentication([
             "attribute" => "jwt",
             "path" => ["/"],
